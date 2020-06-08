@@ -13,7 +13,7 @@ Learn some CSS and improve your NTULearn experience. Stylus GUI makes it easy to
    * [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
    * [Opera](https://addons.opera.com/en/extensions/details/stylus/)
 2. Make a new style (under Manage)
-3. Import Mozilla Format code from the `import.css` file in this repository
+3. Import Mozilla Format code from the [`import.css`](https://raw.githubusercontent.com/beverleyy/ntulearn-restyle/master/import.css) file
 4. Save and exit, or customize the colors and images in the code (CSS)
 
 ## Frequently-asked
