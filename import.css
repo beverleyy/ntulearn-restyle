@@ -1,0 +1,2097 @@
+@-moz-document domain("ntulearn.ntu.edu.sg") {
+/* ==============================================================
+
+    NTULearn ReStyle (Dark)
+    Author: Bev Y
+
+    Most rights reserved.
+    Find me on GitHub @beverleyy
+
+-----------------------------------------------------------------
+
+    THIS DOES NOT WORK WITH THE NTULEARN TWEAK BY @ZAYNJARVIS
+
+-----------------------------------------------------------------
+
+    ----------
+    DISCLAIMER
+    ----------
+
+    This code was designed to work on student versions of
+    NTULearn; while due care has been taken to ensure that it
+    will not fail on Instructor versions, the author has limited
+    access to Instructor-exclusive course items and therefore
+    not everything will work (the Grades section, for example,
+    would be glitchy).
+
+    I try my best to update this regularly but like every 
+    other NTU student, I am human and have midterms, finals, 
+    lab, research etc. to worry about, so please understand
+    if you notice that your TurnItIn announcements aren't 
+    going away immediately like they're supposed to. :)
+
+    Last update: 25 Jan 2019 [1.1.0]
+
+-----------------------------------------------------------------
+
+    ---------
+    CHANGELOG
+    ---------
+
+    1.1.0   Added new code section to fix Instructor course sites
+
+    1.0.1   Fixed login page footer after Blackboard maintenance
+            Fixed "Quick Links" button positioning
+            Fixed links & notif panel on updates page
+
+============================================================== */
+}
+
+@-moz-document domain("ntulearn.ntu.edu.sg") {
+/*
+This section is for the general HTML page styling
+*/
+/* ------ text selection ------ */
+::selection {
+    color: #667788;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-moz-selection {
+    color: #667788;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-selection {
+    color: #667788;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* ------ scrollbar ------ */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 7px 1px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 8px;
+    height: 8px;
+    background-clip: padding-box;
+    -webkit-border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 4px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #003366;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+/* ------ body/base ------ */
+html {
+    background: url(https://i.imgur.com/TS6E4dj.jpg) fixed no-repeat;
+    background-size: cover;
+}
+
+body {
+    background: transparent!important;
+    min-height: 100vh!important;
+}
+
+#contentFrame,
+#schemePreview,
+#globalNavPageContentArea {
+    background: transparent!important;
+}
+
+html,
+body {
+    max-width: 100%!important;
+    font: 16px/150% calibri;
+    color: #fff!important;
+    overflow-y: auto!important;
+}
+
+* {
+    font-family: calibri!important;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2)!important;
+}
+
+a {
+    color: #667788;
+    transition: 0.3s ease-in-out!important;
+}
+
+input:focus,
+button:focus,
+select:focus,
+a:focus {
+    outline: 0px solid transparent!important;
+}
+}
+
+@-moz-document domain("ntulearn.ntu.edu.sg") {
+/*
+This section is for the main content styling
+*/
+/* ------ topbar ------ */
+/* this is the one that i fixed to the top of the page i.e. the one with your name */
+.global-nav-bar-wrap {
+    background: rgba(15, 15, 15, 0.9)!important;
+    width: 100%!important;
+    position: fixed!important;
+    left: 0!important;
+    top: 0!important;
+    height: 30px!important;
+    box-shadow: 0 0 100px 10px rgba(0, 0, 0, 0.3);
+}
+
+a#quick_links_lightbox_link {
+    position: fixed!important;
+    z-index: 2147483647!important;
+}
+
+.brandingImgWrap a {
+    margin-top: 40px;
+}
+
+.nav-link,
+.nav-link:hover,
+.nav-link:focus {
+    background: transparent;
+    cursor: pointer;
+}
+
+/* this is the second one, like the one with the self-learning shizz */
+#globalNavPageNavArea {
+    background: rgba(25, 25, 25, 0.85)!important;
+    min-height: 121px;
+    z-index: 1;
+    position: relative;
+}
+
+.topTabs {
+    background: transparent!important;
+    font: 14px/24px calibri!important;
+}
+
+table.bouncer {
+    border: 0px solid transparent!important;
+}
+
+.appTabs td.active {
+    border-bottom-color: #667788!important;
+}
+
+.appTabs a:hover,
+.appTabs a:hover span {
+    color: #667788;
+}
+
+.global-nav-bar-wrap {
+    z-index: 100;
+}
+
+.appTabs a,
+.appTabs a:hover,
+.appTabs a:hover span,
+.global-nav-bar-wrap a,
+#quick_links_wrap a {
+    border-bottom: 0px solid transparent!important;
+}
+
+.appTabs a {
+    font-size: 14px!important;
+    line-height: 24px!important;
+}
+
+#topTab,
+table.appTabs tbody tr td a,
+div.topTabs-compact table.appTabs tr td a,
+table.appTabs tbody tr td a:hover,
+div.topTabs-compact table.appTabs tr td a:hover,
+table.appTabs tbody tr td a:focus,
+div.topTabs-compact table.appTabs tr td a:focus {
+    background: transparent;
+    border-color: transparent;
+    padding-bottom: 10px;
+}
+
+#topTabActive,
+table.appTabs tbody tr td.active a,
+table.appTabs tbody tr td.active a:hover,
+table.appTabs tbody tr td.active a:focus,
+div.topTabs-compact table.appTabs tr td.active a,
+div.topTabs-compact table.appTabs tr td.active a:hover,
+div.topTabs-compact table.appTabs tr td.active a:focus {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ddccbb;
+    border-color: transparent;
+}
+
+/* this is the third topbar, the one that's like all "add module" */
+.mainButton > a,
+.secondaryButton > a,
+.mainButton h2 > a,
+.secondaryButton h2 > a {
+    font-size: 12px!important;
+    letter-spacing: 0.5px!important;
+}
+
+.actionBar {
+    background: rgba(36, 36, 36, 0.8)!important;
+}
+
+.actionBar,
+.actionBarMicro,
+.singleControl,
+.navPalette .discover {
+    background: transparent!important;
+    border-color: transparent!important;
+}
+
+.actionBar a,
+.actionBar ul li a {
+    color: #fff!important;
+    transition: 0.3s ease-in-out!important;
+}
+
+.actionBar a:hover,
+.actionBar ul li a:hover {
+    color: #ddccbb!important;
+    background: rgba(25, 25, 25, 0.7)!important;
+}
+
+.accordion_content {
+    background: #333!important;
+}
+
+.flyout-menu .accordion_toggle span {
+    background: #2c2c2c!important;
+    border: 0px solid transparent!important;
+    color: #eaeaea!important;
+}
+
+#bottomButtons {
+    background: #2c2c2c!important;
+}
+
+.bottom-buttons li {
+    border-color: #333!important;
+}
+
+.bottom-buttons a:hover,
+.bottom-buttons a:focus {
+    background-color: #050505!important;
+}
+
+.flyout-menu .accordion-wrapper {
+    background: #333!important;
+}
+
+.tabbedPane.contentPaneWide .receipt {
+    margin-bottom: 0!important;
+}
+
+.good,
+.bad {
+    background: #664455!important;
+    border-color: #664455!important;
+}
+
+/* ------ quicklinks ------ */
+#quick_links_wrap {
+    left: 0!important;
+    right: auto!important;
+    margin-left: 80px!important;
+    top: 5px!important;
+    width: 20px!important;
+    overflow: hidden!important;
+    transition: 0.5s ease-in-out;
+}
+
+#quick_links_wrap a {
+    right: 0!important;
+    position: absolute!important;
+}
+
+#quick_links_wrap:hover {
+    width: 90px!important;
+}
+
+/* ------ quicklinks popup ------ */
+/* this is the overlay */
+.lb-overlay {
+    background: #0c0c0c!important;
+    background-size: cover!important;
+    opacity: 0.85!important;
+}
+
+/* this is the wrapper for the popup panel */
+div.lb-wrapper {
+    box-shadow: 0 0 0 transparent!important;
+    background: rgba(36, 36, 36, 0.8)!important;
+    border: 0px solid transparent!important;
+}
+
+a.lbAction {
+    background: #003366!important;
+    border: 2px solid rgba(0, 0, 0, 0.3)!important;
+}
+
+/* stylin' some scrollbars cos gods CITS y'all needa learn some Aesthetic(TM) */
+.lb-content::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    -webkit-box-shadow: inset 0 0 7px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* this is the popup title */
+.lb-header {
+    background: rgba(25, 25, 25, 0.9)!important;
+    color: #ddccbb!important;
+    padding: 1em 2em!important;
+    font-weight: bold!important;
+    border-radius: 0px!important;
+}
+
+.lb-header h2 {
+    font-weight: bold!important;
+}
+
+/* idk what these are, content probably lmao */
+.lb-content,
+.content-lite,
+.legend ul li {
+    background: transparent!important;
+    border: 0px solid transparent!important;
+}
+
+.content-lite h2,
+h2.hideFromQuickLinks {
+    background: transparent!important;
+    color: #fff!important;
+    font-weight: bold!Important;
+}
+
+.flyout-menu {
+    box-shadow: 0 0 0 transparent!important;
+}
+
+span.presskey {
+    background: #003366!important;
+    border-color: rgba(0, 0, 0, 0.3)!important;
+}
+
+/* ------ the navigation location map thingy at the top ------ */
+.breadcrumbs,
+.paneTabs {
+    background: rgba(15, 15, 15, 0.6)!important;
+    border: 0px solid transparent!important;
+    color: #999!important;
+}
+
+.breadcrumbs ol li,
+.breadcrumbs ol li a {
+    color: #fff!important;
+}
+
+.breadcrumbs ol li a:hover {
+    color: #fff!important;
+}
+
+.breadcrumbs ol li {
+    border-color: rgba(255, 255, 255, 0.1)!important;
+}
+
+.paletteItems li.selectedItem,
+.paletteItems li.selectedItem:hover,
+.paletteItems li.selectedItem:focus,
+.paletteItems li.active,
+.paletteItems li.active:hover,
+.paletteItems li.active:focus {
+    background: rgba(15, 15, 15, 0.3)!important;
+}
+
+.leftColumn-narrow .columnPalette {
+    border-top: 0px solid transparent!important;
+}
+
+.columnPalette a {
+    border-bottom: 0px solid transparent!important;
+}
+
+.paletteItems li {
+    transition: 0.3s ease-in-out;
+}
+
+.paletteItems li:hover,
+.paletteItems li:focus {
+    background: rgba(15, 15, 15, 0.15)!important;
+}
+
+.lb-wrapper .CookieConsent .privacyPolicyContainer .consent-message p {
+    color: #999;
+}
+
+.lb-wrapper .CookieConsent .privacyPolicyContainer .consent-title a,
+.lb-wrapper .CookieConsent .privacyPolicyContainer .consent-title a:hover,
+.lb-wrapper .CookieConsent .privacyPolicyContainer .consent-title a:focus {
+    color: #fff;
+}
+
+/* ------ main content panels ------ */
+.locationPane,
+.container:not(#containerdiv) {
+    background: transparent!important;
+    border: 0px solid transparent!important;
+}
+
+.container {
+    margin: 0 30px 30px!important;
+    padding: 30px!important;
+    color: #ccc;
+}
+
+#containerdiv {
+    background: rgba(36, 36, 36, 0.8)!important;
+    border: 0px solid transparent!important;
+    border-radius: 0;
+}
+
+#pageTitleDiv {
+    padding-bottom: 0px!important;
+    margin-bottom: 0px!important;
+}
+
+/* basic link stylings, consistent across all pages */
+.portlet a:not(.moduleToggleLink),
+.portlet .subCategories li a,
+.contentList a,
+.details a,
+.read a,
+.forgot a,
+.blockGroups .itemHead,
+.blockGroups .itemHeadOpen,
+.content-lite a,
+.columnPalette a,
+#checkUncheckAll a,
+#footer a,
+.additionalInfo a {
+    color: #fff!important;
+    text-decoration: none!important;
+    border-bottom: 1px solid #667788!important;
+    transition: 0.3s ease-in-out!important;
+}
+
+/* adding a Smooth Transition */
+a * {
+    transition: 0.3s ease-in-out!important;
+}
+
+/* hover effect */
+.portlet a:not(.moduleToggleLink):hover,
+.portlet .subCategories li a:hover,
+.contentList a:hover,
+.details a:hover,
+.read a:hover,
+.forgot a:hover,
+.blockGroups .itemHead:hover,
+.blockGroups .itemHeadOpen:hover,
+.content-lite a:hover,
+.columnPalette a:hover,
+#footer a:hover,
+#checkUncheckAll a:hover,
+.additionalInfo a:hover {
+    color: #ddccbb!important;
+    border-bottom-color: #ddccbb!important;
+}
+
+/* button stylings - consistent across everything */
+.genericButton,
+a.actionMenuButton,
+.rumble a,
+.rumble_top h3 + ul > li > a,
+input[type="submit"].genericButton,
+input[type="text"],
+input[type="submit"].submit,
+#notesModuleForm input[type="submit"],
+#txtsearch ~ input[type="button"],
+textarea,
+select,
+#ical,
+.pagingprefs a,
+.fc-button-content,
+.calendar-item label,
+.button-2,
+.button-4,
+.button-5,
+.backLink a {
+    box-shadow: 0 0 0 transparent!important;
+    background: rgba(25, 25, 25, 0.6)!important;
+    border: 0px solid transparent!important;
+    outline: 0px solid transparent!important;
+    color: #fff!important;
+    font-weight: bold!important;
+    border-radius: 0px!important;
+    transition: 0.3s ease-in-out;
+}
+
+.genericButton:hover,
+.rumble a:hover,
+.rumble_top h3 + ul > li > a:hover,
+input[type="submit"].genericButton:hover,
+.pagingprefs a:hover,
+.button-2:hover,
+.button-4:hover,
+.button-5:hover,
+.backLink a:hover,
+.fc-button-content a:hover,
+#ical:hover,
+.calendar-item label:hover {
+    background: rgba(15, 15, 15, 0.85)!important;
+    color: #ddccbb!important;
+}
+
+h3.item,
+.item > h3 > span {
+    color: #fff!important;
+}
+
+.contentList .details .contextItemDetailsHeaders {
+    color: #fff!important;
+}
+
+.moduleTitle {
+    color: #ddccbb!important;
+    font-size: 1.2em;
+}
+
+.collapsible {
+    background: transparent!important;
+}
+
+/* making all the text display properly bc CITS fucked up and gave profs full control over text colors and backgrounds which... is never a good idea */
+.vtbegenerated,
+.vtbegenerated font,
+.vtbegenerated span,
+.vtbegenerated ul,
+.vtbegenerated ol,
+.vtbegenerated p,
+.vtbegenerated a,
+.vtbegenerated em,
+.vtbegenerated strong,
+.vtbegenerated div,
+.vtbegenerated code,
+.vtbegenerated pre,
+.noItems {
+    font-size: 1em!important;
+    color: rgba(255, 255, 255, 0.8)!important;
+    background: transparent!important;
+}
+
+.vtbegenerated hr {
+    border: 0px solid transparent!important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1)!important;
+    background: rgba(255, 255, 255, 0.1)!important;
+}
+
+.vtbegenerated table *,
+.vtbegenerated table {
+    border-color: rgba(255, 255, 255, 0.2)!important;
+    background: transparent!important;
+    border-collapse: collapse;
+}
+
+.vtbegenerated table td {
+    border-width: 1px!important;
+    border-style: solid!important;
+}
+
+.portlet .vtbegenerated table * {
+    border-color: transparent!important;
+}
+
+/* ------ the main content, part 2 ------ */
+.content {
+    max-width: 1300px!important;
+    margin: 0 auto!important;
+}
+
+.portlet {
+    background: rgba(36, 36, 36, 0.8)!important;
+    padding: 30px!important;
+    color: #fff!important;
+    border-radius: 0px!important;
+    border: 0px solid transparent!important;
+    box-shadow: 0 0 0 transparent!important;
+    transition: 0.4s ease-in-out;
+}
+
+.portlet h2.dragHandle {
+    margin: -30px -30px 30px!important;
+    background: rgba(25, 25, 25, 0.9)!important;
+    transition: 0.4s ease-in-out;
+    border-radius: 0;
+}
+
+.column-3:not(#column1) .portlet h2 {
+    padding: 15px 30px!important;
+}
+
+.portlet:hover {
+    background: rgba(36, 36, 36, 0.9)!important;
+}
+
+.portlet:hover h2.dragHandle {
+    background: rgba(25, 25, 25, 0.95)!important;
+}
+
+.portlet span:not(.moduleTitle) {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.portlet span.courseRole,
+.portlet h3 {
+    color: #fff!important;
+    font-weight: 700!important;
+}
+
+.portlet a:hover {
+    color: #ddccbb!important;
+}
+
+.contentPane {
+    margin-left: 270px!important;
+    background: transparent!important;
+}
+
+.popup .contentBox,
+.picker .contentBox {
+    background: transparent!important;
+}
+
+.popup .container {
+    margin: 0 10px 30px!important;
+}
+
+.popup .pageTitle {
+    padding: 30px 30px 0!important;
+}
+
+.pageTitle + .actionBar {
+    margin: 0 10px!important;
+    border: 0px solid transparent!important;
+    background: rgba(15, 15, 15, 0.6)!important;
+}
+
+.contcollapsed {
+    margin-left: 42px!important;
+}
+
+/* fixing the margins on the icons for the page titles */
+.portlet .reorder {
+    background: rgba(25, 25, 25, 0.8)!important;
+    border: 0px solid transparent!important;
+    border-radius: 0px!important;
+    left: -18px!important;
+    bottom: 0!important;
+    top: 0!important;
+    transition: 0.3s ease-in-out;
+}
+
+.portlet .portletList-img > li {
+    border: 0px solid transparent!important;
+    padding: 7px 0!important;
+}
+
+/* ------ the page titles ------ */
+.shadow {
+    border: 0px solid transparent!important;
+    margin-top: 10px!important;
+}
+
+#pageTitleBar,
+#moduleTitle,
+.portlet h2 {
+    padding: 30px!important;
+    margin: -30px -30px 30px!important;
+    background: rgba(25, 25, 25, 0.85)!important;
+    color: #ddccbb!important;
+    width: 100%!important;
+    border-radius: 0;
+}
+
+#pageTitleBar {
+    margin: 30px 0 0!important;
+}
+
+#column0 h2 {
+    margin: -30px -30px 30px!important;
+}
+
+#pageTitleBar {
+    box-sizing: border-box;
+}
+
+#pageTitleText,
+#pageTitleText span,
+.portlet h2 {
+    color: #ddccbb!important;
+    font-weight: bold!important;
+}
+
+#pageTitleDiv {
+    padding-bottom: 0px!important;
+    margin-bottom: 0px!important;
+}
+
+.localViewToggle {
+    display: none!important;
+}
+
+/* ------ footer ------ */
+#copyright {
+    color: #fff!important;
+    padding: 45px!important;
+    margin: 15px 30px 30px!important;
+    width: calc(100% - 150px)!important;
+    background: rgba(36, 36, 36, 0.6)!important;
+    border: 0px solid transparent!important;
+    border-radius: 0px;
+}
+
+#copyright .newCopyright > * {
+    width: calc(100% - 90px)!important;
+}
+
+#footer-content #copyright {
+    color: inherit!important;
+    padding: 0!important;
+    margin: 0!important;
+    width: auto!important;
+    background: transparent!important;
+    border: 0px solid transparent!Important;
+}
+
+.additionalInfo p:first-child:after {
+    display: none!important;
+}
+
+.additionalInfo p:first-child a {
+    padding-right: 0!important;
+}
+}
+
+@-moz-document domain("ntulearn.ntu.edu.sg") {
+/* 
+my prof gave me access to an instructor course site so now i can go wild and fix more shit
+(lmao may I just note that NTU class-auditing policy is shit and that this was the result
+of some back-door conversations about giving me access to material for a course that I was
+banned from attending :D)
+*/
+.liItem:hover,
+.buildList > li:hover {
+    background-color: rgba(15, 15, 15, 0.3)!important;
+    border-color: rgba(255, 255, 255, 0.15)!important;
+}
+
+.menuWrap-inner h2.navDivider {
+    border-top-color: rgba(255, 255, 255, 0.3)!important;
+    background: rgba(25, 25, 25, 0.7)!important;
+    margin-bottom: 0!important;
+}
+
+.appTabs input:focus,
+.appTabs button:focus,
+.appTabs select:focus,
+.appTabs a:focus,
+.global-nav-bar input:focus,
+.global-nav-bar button:focus,
+.global-nav-bar select:focus,
+.global-nav-bar a:focus,
+.mybb-tools input:focus,
+.mybb-tools button:focus,
+.mybb-tools select:focus,
+.mybb-tools a:focus,
+.mybb-div .side-nav input:focus,
+.mybb-div .side-nav button:focus,
+.mybb-div .side-nav select:focus,
+.mybb-div .side-nav a:focus,
+.navPalette input:focus,
+.navPalette button:focus,
+.navPalette select:focus,
+.navPalette a:focus,
+.gradeHeader input:focus,
+.gradeHeader button:focus,
+.gradeHeader select:focus,
+.gradeHeader a:focus,
+.gradingPanelHeader input:focus,
+.gradingPanelHeader button:focus,
+.gradingPanelHeader select:focus,
+.gradingPanelHeader a:focus,
+.inlineGrader .resizeControls input:focus,
+.inlineGrader .resizeControls button:focus,
+.inlineGrader .resizeControls select:focus,
+.inlineGrader .resizeControls a:focus {
+    outline: 0px solid transparent!important;
+}
+
+div#controlPanelPalette {
+    padding: 20px 20px 20px!important;
+    background: rgba(25, 25, 25, 0.7)!important;
+}
+
+div#controlPanelPalette a {
+    color: rgba(240, 240, 240, 0.7)!important;
+}
+
+.menuWrap-inner {
+    padding-top: 500px!important;
+}
+
+#courseMenuPalette,
+#myGroups {
+    height: auto!important;
+    background: rgba(25, 25, 25, 0.9)!important;
+    width: 210px!important;
+    z-index: 999!important;
+}
+
+#courseMenuPalette {
+    margin-top: -500px!important;
+    margin-bottom: 10px!important;
+}
+
+#courseMenuPalette_contents li,
+#courseMenuPalette_paletteTitleHeading h3 {
+    background: transparent;
+}
+
+#courseMenuPalette div.navPaletteContent ul li a,
+#courseMenuPalette h3 a,
+#previewCourseMenu h3 a,
+.navPaletteContent h3 a.submenuLink:before,
+.navPaletteContent h3 a.submenuLink_active:before,
+#courseMenuPalette div.navPaletteContent ul li a span,
+#courseMenuPalette .navPaletteContent .subhead {
+    color: #fff;
+}
+
+.navPalette.tools {
+    border-top: 0px solid transparent!important;
+}
+
+.navPaletteContent .submenu .paletteSearchElement {
+    border-top: 1px solid rgba(255, 255, 255, 0.2)!important;
+    padding: 10px 0!important;
+}
+
+#myGroups .submenu {
+    margin-left: -30px!important;
+}
+
+/* this stuff is for those online quizzes! */
+.infoListWrapper {
+    background: transparent!important;
+    border-color: rgba(255, 255, 255, 0.1)!important;
+}
+
+.key-valueTable tbody td,
+.key-valueTable tbody th {
+    border-top-style: solid!important;
+    border-top-color: rgba(255, 255, 255, 0.1)!important;
+}
+
+.key-valueTable tbody th {
+    color: #fff!important;
+}
+
+.nav .sub ul,
+.nav.gb_currView .sub > ul,
+.menumini ul,
+.quickAddPal,
+.keyboardAccess,
+span.currentTags,
+.liveArea,
+.liveArea-slim,
+.previewArea,
+.jumptopage,
+.panelTabs li.active a.edit,
+.panelTabs li.active a.edit:hover,
+.panelTabs li.active a.edit:focus,
+.flyout,
+.bcContent .flyout,
+ul.tree li a + img + a:focus,
+ul.tree li img + img + a:focus,
+div.treeContainer ul.tree li a.itemActive,
+#learningUnitToc ul.tree li a.itemActive,
+ul.tree li a.itemActive,
+#loginLang ul {
+    background: transparent!important;
+    border: none!important;
+}
+
+.timedQuestionStatus {
+    border-top-width: 1px!important;
+}
+
+.abutton {
+    color: #667788!important;
+}
+
+.qIncomplete,
+.qComplete {
+    background: rgba(0, 0, 0, 0.3)!important;
+    border: none!important;
+    color: #fff!important;
+}
+
+.timerBar {
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(0, 0, 0, 0.15)), to(rgba(25, 25, 25, 0.3)))!important;
+    border-color: rgba(0, 0, 0, 0.3)!important;
+}
+
+fieldset.info,
+div.info {
+    background: transparent!important;
+}
+
+fieldset.info div.label {
+    color: #ddccbb!important;
+}
+
+.attachments tbody tr,
+.inventory-simple tbody tr {
+    border-color: transparent!important;
+}
+
+.steptitle {
+    margin: 18px 0 0!important;
+    background: transparent!important;
+    color: #fff!important;
+    padding: 5px 10px!important;
+}
+
+.browse {
+    background: rgba(25, 25, 25, 0.3)!important;
+    color: #ddccbb!important;
+    margin-top: 20px!important;
+    box-shadow: 0 0 0 transparent!important;
+}
+
+.bubble ul {
+    padding: 15px!important;
+    background: rgba(36, 36, 36, 0.9)!important;
+    border: 1px solid rgba(255, 255, 255, 0.15)!important;
+}
+
+.bubble ul li span {
+    color: #fff!important;
+}
+
+.bubbleStem {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: rgba(255, 255, 255, 0.15) transparent transparent transparent;
+    margin: 0 auto;
+}
+
+.bubbleStem img {
+    display: none;
+}
+
+#icondiv ul li span.label {
+    width: calc(100% - 30px)!important;
+    margin-right: 0px!important;
+    margin-left: 5px!important;
+}
+
+.icon img {
+    display: block;
+    margin: 4px 0;
+}
+}
+
+@-moz-document domain("ntulearn.ntu.edu.sg") {
+/*
+This section is for additional content-specific page styling
+*/
+/* ------ updates page ------ */
+.vertical_filter .stream_full,
+.vertical_filter .stream_header,
+.current_filter,
+.vertical_filter .left_stream_wrapper,
+.stream_page_left,
+.stream_new_entry,
+.mybb-column-wrapper {
+    background: transparent!important;
+    box-shadow: 0 0 0 transparent!important;
+    border: 0px solid transparent!important;
+}
+
+.stream_item {
+    border: 0px solid transparent!important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)!important;
+}
+
+.stream_item,
+.stream_item *:not(a) {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+#left_stream_alerts .stream_item {
+    background: transparent!important;
+    box-shadow: 0 0 0 transparent!important;
+    border: 0px solid transparent!important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)!important;
+}
+
+#left_stream_alerts .stream_item *:not(a),
+#left_stream_alerts .stream_item,
+.stream_new_entry,
+#left_stream_alerts .stream_item.stream_new_entry:hover,
+.stream_new_entry *:not(a),
+#left_stream_alerts .stream_item.stream_new_entry:hover *:not(a) {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.stream_new_entry a,
+#left_stream_alerts .stream_item.stream_new_entry:hover a,
+#left_stream_alerts .stream_item a {
+    color: #fff!important;
+    border-bottom: 1px solid #667788!important;
+}
+
+.stream_new_entry a:hover,
+#left_stream_alerts .stream_item.stream_new_entry:hover a:hover,
+#left_stream_alerts .stream_item a:hover {
+    color: #ddccbb!important;
+    border-bottom-color: #ddccbb!important;
+}
+
+.stream_dynamic_filters {
+    background: rgba(25, 25, 25, 0.7)!important;
+    border-radius: 0!important;
+    border: 0!important;
+    box-shadow: 0 0 0 transparent!important;
+}
+
+.stream_dynamic_filters li a {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.stream_dynamic_filters li a:hover {
+    background: rgba(15, 15, 15, 0.6)!Important;
+    color: #667788!important;
+}
+
+.inlineContextMenu a.browse {
+    display: inline!important;
+    padding: 0!important;
+}
+
+div.stream_settings {
+    background: rgba(15, 15, 15, 0.7)!important;
+    border-color: transparent!important;
+}
+
+.scrollbar_handle {
+    width: 5px!important;
+    background: rgba(255, 255, 255, 0.45)!important;
+}
+
+.scrollbar_handle:hover,
+.scrollbar_handle:active {
+    width: 5px!important;
+    background: rgba(255, 255, 255, 0.9)!important;
+}
+
+ul.streamSettingHelpLinks {
+    border-top-color: rgba(255, 255, 255, 0.15)!important;
+}
+
+.vertical_filter .stream_dynamic_filters h5 {
+    color: #ddccbb!important;
+    font-weight: bold!important;
+}
+
+.vertical_filter .stream_dynamic_filters ul:not(.cal-nav) li a,
+.vertical_filter .stream_list_filter a {
+    text-decoration: none!important;
+    padding: 10px 35px!important;
+    border: 0!important;
+    color: rgba(255, 255, 255, 0.8)!important;
+    margin: 0 -24px!important;
+}
+
+.vertical_filter .stream_dynamic_filters li a:hover,
+.vertical_filter .stream_list_filter a:hover {
+    background: rgba(25, 25, 25, 0.4)!important;
+    color: #667788!important;
+}
+
+.vertical_filter .stream_list_filter .active,
+.vertical_filter .stream_dynamic_filters .active,
+.vertical_filter .stream_list_filter .active:hover,
+.vertical_filter .stream_dynamic_filters .active:hover,
+.vertical_filter .stream_list_filter .active:focus,
+.vertical_filter .stream_dynamic_filters .active:focus {
+    border: 0!important;
+    border-radius: 0!important;
+    background-color: rgba(15, 15, 15, 0.6)!important;
+    box-shadow: 0 0 0 transparent!important;
+    color: #fff!important;
+}
+
+.current_filter {
+    color: #ddccbb!important;
+    padding: 35px 40px!important;
+}
+
+.title-date,
+.title-text {
+    color: #fff!important;
+}
+
+.side-nav {
+    background: rgba(25, 25, 25, 0.7)!important;
+}
+
+.iframe-wrap {
+    border: 0!important;
+}
+
+div#globalNavPageNavArea * {
+    box-shadow: 0 0 0!important;
+}
+
+.gradeTableNew .row {
+    border-color: rgba(255, 255, 255, 0.1)!important;
+    border-left-width: 0!important;
+    background: transparent!important;
+}
+
+.gradeTableNew .row,
+.gradeTableNew .row *:not(a) {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.gradeTableNew .row a {
+    color: #fff!important;
+}
+
+.gradeTableNew .row a:hover {
+    color: #ddccbb!important;
+}
+
+.detail-heading {
+    border-bottom: 0!important;
+}
+
+.detail-heading *:not(a) {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.detail-heading a,
+.mybb-column-wrapper a:not(.section-title) {
+    color: #fff!important;
+    border-bottom: 1px solid #667788!important;
+}
+
+.detail-heading a:hover,
+.mybb-column-wrapper a:not(.section-title):hover {
+    color: #ddccbb!important;
+    border-bottom-color: #ddccbb!important;
+}
+
+.stream-detail-contents,
+.stream-detail-contents *:not(select) {
+    background: transparent!important;
+}
+
+.stream-detail-contents > div,
+.stream-detail-contents > div * {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.filterBarHorizontal ul li a,
+.active_stream_item {
+    border-radius: 0!important;
+    box-shadow: 0 0 0!important;
+    border: 0!important;
+}
+
+.filterBarHorizontal ul li a:hover {
+    background: rgba(36, 36, 36, 0.4)!important;
+}
+
+.filterBarHorizontal ul li a.active,
+.active_stream_item {
+    background: rgba(25, 25, 25, 0.6)!important;
+}
+
+.grades_header,
+.gradeTableNew .calculatedRow.row {
+    border-color: rgba(255, 255, 255, 0.2)!important;
+    box-shadow: 0 0 0!important;
+}
+
+.filterBarHorizontal {
+    background: rgba(25, 25, 25, 0.45)!important;
+}
+
+.filterBarHorizontal ul li a {
+    color: #ddccbb!important;
+}
+
+.grades_header,
+.grades_header * {
+    background: transparent!important;
+    color: #ffffff!important;
+    font-weight: bold!important;
+}
+
+.gradeTableNew .grades_header .cell {
+    padding: 10px!important;
+    font-size: 12px!important;
+}
+
+.gradeTableNew .grades_header,
+.gradeTableNew .grades_header .cell {
+    height: 42px!important;
+}
+
+.gradeTableNew #grades_wrapper {
+    margin-top: 73px!important;
+}
+
+.stream_header {
+    border-bottom-color: rgba(255, 255, 255, 0.3)!important;
+}
+
+.stream_filterlinks_divider {
+    border-left: 1px solid rgba(255, 255, 255, 0.25)!important;
+}
+
+.stream_list_filter a.active,
+.stream_list_filter a.active:hover {
+    color: #fff!important;
+    box-shadow: 0 0 0!important;
+    border: 0!important;
+    background-color: rgba(25, 25, 25, 0.6)!important;
+}
+
+.stream_list_filter > li a {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+#calendar *:not(.fc-day-number) {
+    border-color: rgba(255, 255, 255, 0.15)!important;
+}
+
+.fc-state-highlight {
+    box-shadow: 0 0 0!important;
+    background: #003366!important;
+    color: #fff!important;
+    border-color: rgba(255, 255, 255, 0.15)!important;
+}
+
+td.fc-state-highlight * {
+    color: #fff!important;
+}
+
+.fc td:not(.fc-state-highlight) *,
+.fc-border-separate tr.fc-first th {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.fc-border-separate tr.fc-first th {
+    text-align: center!important;
+}
+
+.cal-nav a {
+    background-color: transparent!important;
+}
+
+.ui-datepicker-calendar a:not(.ui-state-highlight):not(.ui-state-active) {
+    background: transparent!important;
+    color: rgba(255, 255, 255, 0.8)!important;
+    border-color: rgba(255, 255, 255, 0.1)!important;
+}
+
+.ui-state-highlight,
+.ui-datepicker .ui-state-active {
+    box-shadow: 0 0 0!important;
+    color: #fff!important;
+    border-color: rgba(255, 255, 255, 0.15)!important;
+}
+
+.ui-state-highlight {
+    background: #664455!important;
+}
+
+.ui-datepicker .ui-state-active:not(.ui-state-highlight) {
+    background: #003366!important;
+}
+
+.margin-interact h3,
+.ui-datepicker-title,
+h3.section-title {
+    color: #ddccbb!important;
+}
+
+#checkUncheckAll,
+#ical {
+    margin-bottom: 15px!important;
+}
+
+.section-title-toggle {
+    color: #667788!important;
+}
+
+.mybb-column-wrapper * {
+    border-color: rgba(255, 255, 255, 0.15)!important;
+    box-shadow: 0 0 0!important;
+}
+
+.stream_pages * {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+/* ------ adding modules page ------ */
+/* this div name is ridiculous but who am i to comment */
+div.helphelp {
+    background: rgba(36, 36, 36, 0.8)!important;
+    color: #fff!important;
+    padding: 30px!important;
+    margin-top: 0px!important;
+    margin-bottom: -1px!important;
+    border: 0px solid transparent!important;
+}
+
+.paging *:not(.pagelink) {
+    color: #fff!important;
+}
+
+.helphelp,
+.nav a {
+    color: #fff!important;
+    border-bottom-color: #667788!important;
+}
+
+.nav a:hover {
+    color: #ddccbb!important;
+    border-bottom-color: #ddccbb!important;
+}
+
+#calculatorValue {
+    box-sizing: border-box;
+}
+
+#notesModuleForm input[type="submit"] {
+    padding: 10px!important;
+}
+
+#txtsearch ~ input[type="button"] {
+    padding: 5px 10px!important;
+    margin-left: 5px!important;
+}
+
+.itemHead {
+    background: rgba(25, 25, 25, 0.8)!important;
+    border: 0!important;
+}
+
+input[type="submit"].genericButton,
+.button-4 {
+    padding: 5px 10px 4px!important;
+    font-size: 14px!important;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="text"]#txtSearch {
+    font-weight: normal!important;
+}
+
+.collapsible table,
+.inventory,
+#searchBlock li,
+.expandedModule {
+    background: transparent!important;
+}
+
+/* ------ the file cabinet page... fuck you CITS, eat donkey crap */
+.inventory > thead tr th,
+.splashTable thead tr th,
+.sortable > thead th a {
+    color: #fff!important;
+}
+
+.inventory thead,
+.inventory tr,
+.inventory > tbody tr,
+.inventory th,
+.inventory td,
+.inventory tbody,
+.inventory > tbody tr:last-child td,
+.inventory > tbody tr:last-child th {
+    border-color: rgba(255, 255, 255, 0.1)!important;
+}
+
+.inventory th *,
+.inventory td {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.inventory * {
+    background: transparent!important;
+}
+
+/* ------ this is the stuff for pages with the "ok" button i guess ------ */
+div.okContainer,
+div.ok div.container,
+.collabContainer {
+    padding-bottom: 75px!important;
+}
+
+.backLink {
+    right: 17.5px!important;
+}
+
+.backLink a::before {
+    color: inherit!important;
+}
+
+.expandedModule .portlet h2 {
+    margin: -30px -30px 15px!important;
+    padding: 15px 30px!important;
+}
+
+/* this stuff is for the report card module */
+th {
+    text-align: inherit!important;
+}
+
+.reportcard .bLight th {
+    text-align: center;
+    font-weight: bold;
+}
+
+.reportcard .bLight th:nth-child(2) {
+    text-align: center!important;
+}
+
+.containerPortal {
+    display: flex!important;
+}
+
+.containerPortal > div:not(.clearfix) {
+    display: none;
+}
+
+.column-2 {
+    width: auto!important;
+    min-width: 40%;
+}
+
+/* hiding the turnitin shit and announcements cuz no one gives a fuck you li'l CITS shits */
+#module\:_276_1,
+#module\:_342_1,
+#module\:_347_1,
+#module\:_350_1,
+#module\:_376_1,
+#module\:_377_1,
+#module\:_378_1,
+#module\:_443_1,
+a#courseMenu_combo {
+    display: none!important;
+}
+
+/* ------ the navigation menu on the course pages ------ */
+.navigationPane,
+#courseMenuPalette ul,
+#courseMenuPalette div.navPaletteContent {
+    background: transparent!important;
+    height: auto!important;
+}
+
+.navigationPane {
+    padding: 60px 0 0 30px!important;
+}
+
+.navigationPane.navcollapsed {
+    padding: 60px 0 0!important;
+}
+
+.menuWrap {
+    border-radius: 0px!important;
+    min-height: auto!important;
+    background: transparent!important;
+}
+
+.secondaryButton > a,
+.mainButton h2 > a,
+.secondaryButton h2 > a {
+    background: rgba(25, 25, 25, 0.35)!important;
+}
+
+.shortcuts li a {
+    border: 0px solid transparent!important;
+}
+
+.listCm .courseMenu .divider hr,
+.buttonCm .courseMenu .divider hr {
+    background: rgba(255, 255, 255, 0.1)!important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1)!important;
+}
+
+.courseMenu a,
+.submenu a {
+    padding: 6px 18px 6px 30px!important;
+    margin: 0!important;
+}
+
+.courseMenu a:hover,
+.submenu a:hover {
+    background: rgba(0, 0, 0, 0.45)!important;
+}
+
+#puller a,
+#puller a:after {
+    background: rgba(0, 0, 0, 0.6)!important;
+    border: 0px solid transparent!important;
+    transition: 0.3s ease-in-out!important;
+}
+
+#puller a:after {
+    position: absolute!important;
+    left: 0!important;
+    font-size: 12px!important;
+    padding: 10px!important;
+}
+
+.actionBarMicro {
+    position: absolute!important;
+    margin-top: -32px!important;
+    margin-left: 0!important;
+}
+
+#courseMenuPalette div.navPaletteContent ul li a,
+#courseMenuPalette h3 a,
+#courseMenuPalette div.navPaletteContent ul li a span {
+    transition: 0.3s ease-in-out;
+}
+
+#courseMenuPalette div.navPaletteContent ul li a:hover,
+#courseMenuPalette h3 a:hover,
+#courseMenuPalette div.navPaletteContent ul li a:hover span,
+.submenu li a:hover {
+    color: #667788!important;
+}
+
+/* ------ content stylings ------ */
+/* for the announcements */
+.announcementList > li {
+    border-top: 1px solid rgba(255, 255, 255, 0.1)!important;
+    padding: 30px!important;
+}
+
+.announcementList .details,
+#announcementList .details {
+    margin-right: calc(12.8em + 60px)!important;
+}
+
+.announcementInfo {
+    border-left: 1px solid rgba(255, 255, 255, 0.1)!important;
+    padding: 30px!important;
+}
+
+.announcementInfo span {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+/* very honestly idk what this does lmao */
+/* oh right i remembered, it's the stuff for when this shitty dysfunctional site gives you a form to fill */
+.steptitle {
+    font-size: 1.2em!important;
+}
+
+#dataCollectionContainer {
+    padding: 0 30px!important;
+    color: #888!important;
+}
+
+#dataCollectionContainer,
+#dataCollectionContainer *:not(.submitStepFixed):not(input):not(select) {
+    background: transparent!important;
+    color: #fff!important;
+    border-color: rgba(255, 255, 255, 0.15)!important;
+}
+
+#dataCollectionContainer input[type="text"] {
+    background: rgba(255, 255, 255, 0.15)!important;
+    margin-right: 15px!important;
+    border-color: transparent!important;
+    color: #fff!important;
+}
+
+.submitStepFixed {
+    margin: 0 -30px!important;
+    padding: 0 30px!important;
+}
+
+.submitStepBottom {
+    background: rgba(25, 25, 25, 0.85)!important;
+    border-color: rgba(255, 255, 255, 0.3)!important;
+}
+
+div[id*="step"],
+.submittitle,
+#infoStep,
+#taskStatusStep,
+#linkedContentStep {
+    border-top: 0px solid transparent!important;
+}
+
+#dataCollectionContainer *.submitStepFixed * {
+    color: #ddccbb!important;
+}
+
+#dataCollectionContainer *.button-1,
+#dataCollectionContainer *.button-2 {
+    border: 0px solid transparent!important;
+    background: rgba(25, 25, 25, 0.85)!important;
+    color: #ddccbb!important;
+    font-size: 16px!important;
+    box-shadow: 0 0 0 transparent!important;
+}
+
+#dataCollectionContainer *.button-1:hover,
+#dataCollectionContainer *.button-2:hover {
+    background: rgba(15, 15, 15, 0.9)!important;
+    color: #667788!important;
+}
+
+/* for the small headings in every course page */
+h3 a span:not(.moduleTitle),
+h4 {
+    color: #fff!important;
+}
+
+h3 a:hover span {
+    color: #ddccbb!important;
+}
+
+.collapsible {
+    border-top: 0px solid transparent!important;
+}
+
+.collapsible table {
+    color: #fff!important;
+}
+
+.column-3 .portlet h2:not(.draggableHandle) {
+    margin: -30px -30px 30px!important;
+}
+
+#socials a {
+    border-bottom: 0px solid transparent!important;
+}
+
+.item h3 a span,
+.individualContent-link > span,
+.read > a > span {
+    text-decoration: none!important;
+}
+
+/* cleaning up some bits and pieces... thanks CITS, you guys suck */
+.edit_controls {
+    margin: -5px 0px 0px!important;
+}
+
+.edit_controls a,
+.edit_controls a:not(.moduleToggleLink) {
+    border-bottom: 0px solid transparent!important;
+}
+
+a.moduleToggleLink {
+    margin-top: 25px!important;
+    margin-left: 20px!important;
+}
+
+.edit_controls + h2.dragHandle {
+    padding-left: 50px!important;
+    padding-right: 10px!important;
+}
+
+.contentList > li {
+    padding: 45px!important;
+}
+
+.contentList > li,
+.contentListPlain > li,
+.portletBlock {
+    border-top-color: rgba(255, 255, 255, 0.2)!important;
+}
+
+.announcementFilter {
+    border-bottom-color: rgba(255, 255, 255, 0.1)!important;
+}
+
+.contentList > li:first-child,
+.contentList > li.read:first-child:hover,
+.buildList > li:first-child,
+.contentListPlain > li:first-child,
+.announcementList > li:first-child {
+    border-top-color: transparent!important;
+}
+
+#contentPanel .pageTitle + .actionBar {
+    margin: 0 30px!important;
+}
+
+.nav .sub ul {
+    background: rgba(36, 36, 36, 0.85)!important;
+    border: 0px solid transparent!important;
+}
+
+.right,
+.right span {
+    color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.item_icon {
+    margin: 15px!important;
+}
+
+.attachments li {
+    margin-bottom: 5px!important;
+}
+
+/* this fixes up the "quick access" panel that appears when you click on the course name */
+.accordion_content li a {
+    color: #667788!important;
+}
+
+#courseMenuPalette a:hover,
+#controlPanelPalette_contents a:hover,
+#courseMenuPalette span:hover,
+#controlPanelPalette_contents span:hover,
+.accordion_content li a:hover {
+    color: #ddccbb!important;
+}
+
+span.badge {
+    background: #003366!important;
+}
+
+.cmdiv {
+    max-height: 70vh!important;
+    position: fixed!important;
+    bottom: 60px!important;
+    padding: 15px!important;
+    background: rgba(36, 36, 36, 0.95)!important;
+    border: 0px solid transparent!important;
+    overflow-y: auto!important;
+    overflow-x: hidden!important;
+}
+
+.cmdiv li.contextmenubar_top a,
+.cmdiv li.contextmenubar_top a:focus,
+.cmdiv li.contextmenubar_top a:hover {
+    background: transparent!important;
+    position: absolute!important;
+}
+
+span.labelMenuItem {
+    color: #eaeaea!important;
+}
+
+.cmdiv a {
+    color: #ababab!important;
+    margin: 0 -20px!important;
+    padding: 5px 25px 5px 35px!important;
+}
+
+.cmdiv a.close-menu {
+    margin-top: 5px!important;
+}
+
+.cmdiv a:hover {
+    background: rgba(0, 0, 0, 0.45)!important;
+    color: #667788!important;
+}
+}
+
+@-moz-document domain("ntulearn.ntu.edu.sg") {
+/* ------ login page ------ */
+#loginPageContainer {
+    background: transparent!important;
+    border: 0px solid transparent!important;
+    margin: auto!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#loginBox li label {
+    color: #fff!important;
+}
+
+#loginBox li input[type="submit"] {
+    background: rgba(36, 36, 36, 0.9)!important;
+    border-radius: 3px!important;
+    color: #fff!important;
+    border: 0px solid transparent!important;
+    box-shadow: 0 0 0 transparent!important;
+}
+
+#loginBox input[type="text"],
+#loginBox input[type="password"],
+#loginRedirectProviders button {
+    background: rgba(36, 36, 36, 0.7)!important;
+    color: #fff!important;
+    border-radius: 0px!important;
+    border: 0px solid transparent!important;
+    box-shadow: 0 0 0 transparent!important;
+}
+
+#loginLang ul {
+    background: rgba(36, 36, 36, 0.7)!important;
+    border: 0px solid transparent!important;
+}
+
+#langMenu li,
+#langMenu li a {
+    color: rgba(255, 255, 255, 0.7)!important;
+}
+
+#langMenu li a {
+    padding: 7px 15px!important;
+}
+
+#langMenu li a:hover {
+    background: rgba(15, 15, 15, 0.6)!important;
+}
+
+#loginAnnouncements {
+    display: none!important;
+}
+
+.newCopyright .logo img {
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+}
+}
+
+@-moz-document domain("ntulearn.ntu.edu.sg") {
+/* ------ homepage ------ */
+#menu-wrapper {
+    bottom: 45px!important;
+}
+
+#header-wrapper {
+    background: rgba(25, 25, 25, 0.8)!important;
+    margin-bottom: 23px!important;
+    height: 65px!important;
+}
+
+.ddsmoothmenu {
+    font-size: 14px!important;
+}
+
+.ddsmoothmenu ul li a {
+    color: rgba(255, 255, 255, 0.8)!important;
+    text-shadow: 0 0 0 transparent!important;
+}
+
+.ddsmoothmenu ul li ul {
+    border: 0px solid transparent!important;
+}
+
+.ddsmoothmenu ul li ul li {
+    background: rgba(25, 25, 25, 0.6)!important;
+    border: 0px solid transparent!important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2)!important;
+    transition: 0.3s ease-in-out;
+}
+
+.ddsmoothmenu ul li ul li:first-child {
+    border-top: 0px solid transparent!important;
+}
+
+.ddsmoothmenu ul li ul li:hover {
+    background: rgba(25, 25, 25, 0.9)!important;
+}
+
+.ddsmoothmenu ul li ul li ul {
+    padding-top: 0px!important;
+}
+
+.ddsmoothmenu ul li ul li ul li {
+    background: rgba(25, 25, 25, 0.35)!important;
+}
+
+.ddsmoothmenu ul li ul li ul li:hover {
+    background: rgba(25, 25, 25, 0.6)!important;
+}
+
+.intro {
+    display: none!important;
+}
+
+.ntulearn h1 {
+    background: rgba(36, 36, 36, 0.8)!important;
+    border: 0px solid transparent!important;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.ntulearn h1:hover {
+    background: rgba(25, 25, 25, 0.85)!important;
+    color: #ddccbb!important;
+}
+
+.ntulearn h1 a {
+    font-family: "Calibri Light"!important;
+    transition: 0.3s ease-in-out;
+}
+
+.ntulearn h1:hover a {
+    color: #ddccbb!important;
+    font-weight: bold!important;
+}
+
+#cycle-wrapper ~ #wrapper {
+    margin-top: -60px!important;
+}
+
+#cycle-wrapper {
+    padding: 15px;
+    background: rgba(36, 36, 36, 0.8);
+    border: 0px solid transparent;
+    border-radius: 0px;
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+}
+
+#cycle-wrapper img {
+    border-radius: 5px;
+    border: 0px solid transparent!important;
+}
+
+#sliderholder-cycle {
+    box-shadow: 0 0 0 transparent!important;
+}
+
+.slidernav {
+    margin-top: 35px!important;
+}
+
+.sliderprev,
+.slidernext {
+    background: url(https://png.icons8.com/windows/1600/chevron-right.png)!important;
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+    background-size: 25px 25px!important;
+    box-shadow: 0 0 0 transparent!important;
+    background-color: rgba(36, 36, 36, 0.5)!important;
+    border: 0px solid transparent!important;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.sliderprev {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.sliderprev:hover,
+.slidernext:hover {
+    background-color: rgba(25, 25, 25, 0.65)!important;
+}
+
+.slidernav a {
+    background: rgba(36, 36, 36, 0.5)!important;
+    border: 0px solid transparent!important;
+    border-radius: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+.slidernav a:hover {
+    background: rgba(25, 25, 25, 0.7)!important;
+}
+
+.slidernav a.activeSlide {
+    background: rgba(15, 15, 15, 0.85)!important;
+}
+
+.push {
+    height: 59px!important;
+    margin: 0!important;
+}
+
+#footer {
+    background: rgba(25, 25, 25, 0.6)!important;
+}
+}
+
+@-moz-document domain("ntulearn.ntu.edu.sg") {
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    .contentPaneWide,
+    .panelWide {
+        margin: 0 30px!important;
+    }
+
+    .contentPaneWide .pageTitle {
+        padding: 0 10px!important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .announcementList .details,
+    #announcementList .details {
+        display: block;
+        margin-right: 0!important;
+    }
+
+    .announcementInfo {
+        display: none!important;
+    }
+
+    .announcementList .item,
+    .announcementList-read .item,
+    #announcementList .item {
+        padding-right: 0!important;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .containerPortal {
+        display: block!important;
+    }
+
+    .column-2 {
+        width: 100%!important;
+    }
+}
+}
