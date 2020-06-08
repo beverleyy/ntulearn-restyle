@@ -5,6 +5,8 @@ Improves aesthetic of NTULearn (Blackboard) with Stylus extension.
 
 Key features include a colorful dark interface that is easier on the eyes, less clutter and all unnecessary ads/notices gone (!).
 
+Learn some CSS and improve your NTULearn experience. Stylus GUI makes it easy to edit, too.
+
 ## How to use
 1. Install the Stylus extension:
    * [Chrome or Brave](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
@@ -16,7 +18,7 @@ Key features include a colorful dark interface that is easier on the eyes, less 
 
 ## Frequently-asked
 ### Q: Can I change the colors and background?
-A: Yes! If you have some basic CSS knowledge, it is easy. The background image needs to be uploaded to a host, and you will replace the direct link to the background-image property under `body`. For the colors, you can change them with a Ctrl+F once identified. I am working on making a GUI for customization soon.
+A: **Yes! If you have some basic CSS knowledge, it is easy.** The background image needs to be uploaded to a host, and you will replace the direct link to the background-image property under `body`. For the colors, you can change them with a Ctrl+F once identified. I am working on making a GUI for customization soon.
 
 ### Q: If I already have the Stylish extension, do I still need to install Stylus?
 A: No, this style works also with Stylish browser extension. However, you may want to read [these](https://www.alphr.com/security/1009689/stylish-spyware-google-chrome-extension) [articles](https://www.ghacks.net/2018/08/17/stylish-add-on-returns/) about why I recommend users to use Stylus over Stylish.
