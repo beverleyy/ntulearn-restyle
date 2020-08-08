@@ -6,7 +6,6 @@
 
     Most rights reserved.
     Find me on GitHub @beverleyy
-    https://beverleyy.github.io
 
 -----------------------------------------------------------------
 
@@ -31,15 +30,13 @@
     if you notice that your TurnItIn announcements aren't 
     going away immediately like they're supposed to. :)
 
-    Last update: 25 Oct 2019 [2.0.0]
+    Last update: 25 Jan 2019 [1.1.0]
 
 -----------------------------------------------------------------
 
     ---------
     CHANGELOG
     ---------
-    
-    2.0.0   Updated for new NTU Blackboard.
 
     1.1.0   Added new code section to fix Instructor course sites
 
@@ -906,6 +903,23 @@ div#controlPanelPalette a {
     margin-left: -30px!important;
 }
 
+.buildList > li.separator {
+    background: transparent;
+}
+
+.separator .text {
+    background: transparent;
+    color: #ccc;
+}
+
+.contentList > li,
+.buildList > li,
+.contentListPlain > li,
+.announcementList > li,
+.contentPageItem {
+    border-color: transparent;
+}
+
 /* this stuff is for those online quizzes! */
 .infoListWrapper {
     background: transparent!important;
@@ -1547,6 +1561,41 @@ a#courseMenu_combo {
     background: transparent!important;
 }
 
+#menuWrap,
+#courseMenuPalette,
+#courseMenuPalette ul,
+#courseMenuPalette h3 a,
+#previewCourseMenu h3 a,
+#courseMenuPalette div.navPaletteContent,
+#courseMenuPalette_contents li,
+#courseMenuPalette div.navPaletteContent ul li a span,
+.navPaletteContent h3 a.submenuLink:before,
+.navPaletteContent h3 a.submenuLink_active:before,
+#courseMenuPalette div.navPaletteContent ul li > a,
+#courseMenuPalette div.navPaletteContent ul li a span,
+#courseMenuPalette .navPaletteContent .subhead {
+    background: transparent;
+    color: inherit;
+}
+
+.listCm .courseMenu a.cmimg:hover,
+.portlet a.cmimg:hover,
+.listCm .courseMenu a.cmimg:focus,
+.portlet a.cmimg:focus,
+.buttonCm .courseMenu a.cmimg:hover,
+.buttonCm .courseMenu a.cmimg:focus,
+.cmimg-small:focus,
+.cmimg-small:hover {
+    background: transparent url(https://learn.blackboardcdn.com/3800.15.0-rel.24+b25671a/themes/as_2015/images/controls.png) no-repeat -28px -142px!important;
+}
+
+.listCm .courseMenu a.cmimg,
+.buttonCm .courseMenu a.cmimg,
+.portlet a.cmimg,
+a.cmimg-small {
+    top: 10px;
+}
+
 .secondaryButton > a,
 .mainButton h2 > a,
 .secondaryButton h2 > a {
@@ -1563,7 +1612,7 @@ a#courseMenu_combo {
     border-top: 1px solid rgba(255, 255, 255, 0.1)!important;
 }
 
-.courseMenu a,
+.courseMenu li > a,
 .submenu a {
     padding: 6px 18px 6px 30px!important;
     margin: 0!important;
