@@ -3,9 +3,12 @@ Improves aesthetic of NTULearn (Blackboard) with Stylus extension.
 
 ![NTULearn Redesign](https://beverleyy.github.io/images/website/ntulearn.png)
 
-Key features include a colorful dark interface that is easier on the eyes, less clutter and all unnecessary ads/notices gone (!).
+## Features
 
-Learn some CSS and improve your NTULearn experience. Stylus GUI makes it easy to edit, too.
+* Colorful dark interface is easier on the eyes
+* Reduced clutter from school advertisement spam
+* Remove all unnecessary ads/notices (!)
+* Learn some CSS and improve your NTULearn experience! Easy to edit from the Stylus GUI.
 
 ## How to use
 1. Install the Stylus extension:
@@ -36,3 +39,19 @@ A: **No, this code does not work** with the [NTULearn Tweak](https://chrome.goog
 Updates will be committed to the `import.css` file in this repository as soon as they are available. Bear in mind that I myself am a student and this is only a side project. 
 
 Also, this plugin will be maintained up until my graduation in (hopefully) July 2021.
+
+## To-do list
+* Make this a proper Chrome/Firefox extension (then, I can introduce some Javascript-only features too!)
+* Create a proper GUI for easier editing/change background/change color scheme
+* Improve Instructor Blackboard features/layout
+* Add a light mode
+
+## Changelog
+* 9 Aug 2020:
+  * Introduced sticky sidebars on course pages
+  * Updated Instructor Blackboard code to resolve new artefacts
+* 8 Jun 2020: 
+  * Upgraded code for NTULearn 2.0 after returning from study abroad
+  * Initial code upload to Github
+* 25 Jan 2019: 
+  * Fixed artefacts on Instructor Blackboard
