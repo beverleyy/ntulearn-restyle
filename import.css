@@ -1548,17 +1548,21 @@ a#courseMenu_combo {
 }
 
 .navigationPane {
-    padding: 60px 0 0 30px!important;
+    padding: 0 0 0 30px!important;
+    margin-top: 30px;
+    position: sticky;
 }
 
 .navigationPane.navcollapsed {
-    padding: 60px 0 0!important;
+    padding: 0 0!important;
 }
 
 .menuWrap {
     border-radius: 0px!important;
     min-height: auto!important;
     background: transparent!important;
+    position: absolute;
+    margin-top: 30px;
 }
 
 #menuWrap,
@@ -1576,6 +1580,10 @@ a#courseMenu_combo {
 #courseMenuPalette .navPaletteContent .subhead {
     background: transparent;
     color: inherit;
+}
+
+.navcollapsed .menuWrap {
+    margin-left: -210px;
 }
 
 .listCm .courseMenu a.cmimg:hover,
