@@ -30,24 +30,12 @@
     if you notice that your TurnItIn announcements aren't 
     going away immediately like they're supposed to. :)
 
-    Last update: 25 Jan 2019 [1.1.0]
-
------------------------------------------------------------------
-
-    ---------
-    CHANGELOG
-    ---------
-
-    1.1.0   Added new code section to fix Instructor course sites
-
-    1.0.1   Fixed login page footer after Blackboard maintenance
-            Fixed "Quick Links" button positioning
-            Fixed links & notif panel on updates page
-
 ============================================================== */
 }
 
 @-moz-document domain("ntulearn.ntu.edu.sg") {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
 /*
 This section is for the general HTML page styling
 */
@@ -118,13 +106,13 @@ body {
 html,
 body {
     max-width: 100%!important;
-    font: 16px/150% calibri;
+    font: 1em/200% "Roboto",Helvetica,sans-serif;
     color: #fff!important;
     overflow-y: auto!important;
 }
 
 * {
-    font-family: calibri!important;
+    font-family: "Roboto",Helvetica,sans-serif!important;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2)!important;
 }
 
@@ -183,7 +171,7 @@ a#quick_links_lightbox_link {
 
 .topTabs {
     background: transparent!important;
-    font: 14px/24px calibri!important;
+    font: 14px/24px "Roboto",Helvetica,sans-serif!important;
 }
 
 table.bouncer {
@@ -886,8 +874,28 @@ div#controlPanelPalette a {
 .navPaletteContent h3 a.submenuLink:before,
 .navPaletteContent h3 a.submenuLink_active:before,
 #courseMenuPalette div.navPaletteContent ul li a span,
-#courseMenuPalette .navPaletteContent .subhead {
+#courseMenuPalette .navPaletteContent .subhead,
+.flyout h3 {
     color: #fff;
+}
+
+.sub:hover .flyout {
+    background: #333!important;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.flyout .column-2 {
+    min-width: auto;
+    width: 50%!important;
+}
+
+#courseMenuPalette_actionbar ul[role="menu"] {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+    background: rgba(45, 45, 45, 0.9)!important;
+}
+
+ul[role="menu"] a:hover {
+    background: rgba(255, 255, 255, 0.1)!important;
 }
 
 .navPalette.tools {
@@ -2030,7 +2038,8 @@ span.labelMenuItem {
 }
 
 .ntulearn h1 a {
-    font-family: "Calibri Light"!important;
+    font-weight: 300!important;
+    font-family: "Roboto"!important;
     transition: 0.3s ease-in-out;
 }
 
