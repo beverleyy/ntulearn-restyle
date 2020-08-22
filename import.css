@@ -106,7 +106,7 @@ body {
 html,
 body {
     max-width: 100%!important;
-    font: 1em/200% "Roboto",Helvetica,sans-serif;
+    font: 14px/200% "Roboto",Helvetica,sans-serif;
     color: #fff!important;
     overflow-y: auto!important;
 }
@@ -584,6 +584,8 @@ h3.item,
 .vtbegenerated div,
 .vtbegenerated code,
 .vtbegenerated pre,
+.vtbegenerated b,
+.vtbegenerated i,
 .noItems {
     font-size: 1em!important;
     color: rgba(255, 255, 255, 0.8)!important;
@@ -847,7 +849,9 @@ div#controlPanelPalette a {
 }
 
 .menuWrap-inner {
-    padding-top: 500px!important;
+    margin-bottom: -10px;
+    margin-top: 550px!important;
+    background: transparent!important;
 }
 
 #courseMenuPalette,
@@ -1637,6 +1641,11 @@ a.cmimg-small {
 .courseMenu a:hover,
 .submenu a:hover {
     background: rgba(0, 0, 0, 0.45)!important;
+}
+
+#puller {
+    top: 50px!important;
+    bottom: 0px!important;
 }
 
 #puller a,
