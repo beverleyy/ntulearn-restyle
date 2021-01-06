@@ -106,13 +106,13 @@ body {
 html,
 body {
     max-width: 100%!important;
-    font: 14px/200% "Roboto",Helvetica,sans-serif;
+    font: 14px/200% "Roboto", Helvetica, sans-serif;
     color: #fff!important;
     overflow-y: auto!important;
 }
 
 * {
-    font-family: "Roboto",Helvetica,sans-serif!important;
+    font-family: "Roboto", Helvetica, sans-serif!important;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.2)!important;
 }
 
@@ -171,7 +171,7 @@ a#quick_links_lightbox_link {
 
 .topTabs {
     background: transparent!important;
-    font: 14px/24px "Roboto",Helvetica,sans-serif!important;
+    font: 14px/24px "Roboto", Helvetica, sans-serif!important;
 }
 
 table.bouncer {
@@ -890,7 +890,7 @@ div#controlPanelPalette a {
 
 .flyout .column-2 {
     min-width: auto;
-    width: 50%!important;
+    /*     width: 50%!important; */
 }
 
 #courseMenuPalette_actionbar ul[role="menu"] {
@@ -1539,6 +1539,10 @@ th {
 }
 
 /* hiding the turnitin shit and announcements cuz no one gives a fuck you li'l CITS shits */
+.portlet:not(#module\:_22_1):not(#module\:_371_1):not(#module\:_394_1) {
+    display: none!important;
+}
+
 #module\:_276_1,
 #module\:_342_1,
 #module\:_347_1,
@@ -1700,6 +1704,11 @@ a.cmimg-small {
 
 .announcementInfo span {
     color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.announcementBody * {
+    background: transparent!important;
+    font: inherit!important;
 }
 
 /* very honestly idk what this does lmao */
@@ -1912,6 +1921,147 @@ span.labelMenuItem {
 .cmdiv a:hover {
     background: rgba(0, 0, 0, 0.45)!important;
     color: #667788!important;
+}
+
+/* ------ discussion board ------ */
+.message-wrapper-inner,
+.reply-lvl-0 .message-wrapper-inner,
+.db-head-message .message-wrapper-inner {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15)!important;
+    box-shadow: 0 0 0 transparent;
+    border-radius: 0;
+}
+
+.thread-detail-page .contentBox {
+    background: transparent!important;
+}
+
+.dbThreadInfo {
+    color: inherit;
+}
+
+.unread-posts,
+.need-moderation,
+.unread-replies-to-me-posts {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    color: #fff;
+    border: transparent;
+}
+
+.genericButton,
+.genericButtonImg,
+input[type="submit"].genericButton,
+.browse,
+.browseIcon,
+.rumble h3 + ul > li > a,
+.rumble h3 + ul > li > a,
+.rumble_top h3 + ul > li > a,
+.rumble_top h3 + ul > li > a,
+.paging a,
+.itemHeaderControl > a,
+.actionMenuButton,
+.button-3,
+.button-3-img,
+.button-4,
+.button-4-img,
+#toolsSearchBox + .button-4,
+.treeContainer .tree li a.button-4-img,
+.rumble a,
+.rumble_top a,
+.rumble .abutton,
+.rumble_top .abutton {
+    box-shadow: 0 0 0 transparent;
+    border-radius: 0;
+    color: inherit;
+}
+
+.rumble .listItemSelect a,
+.rumble_top .listItemSelect a {
+    text-decoration: none;
+}
+
+.listItemSelect {
+    color: inherit;
+}
+
+.genericButton:hover,
+.genericButton:focus,
+.genericButtonImg:hover,
+.genericButtonImg:focus,
+.browse:hover,
+.browse:focus,
+.browseIcon:hover,
+.browseIcon:focus,
+input[type="submit"].genericButton:hover,
+input[type="submit"].genericButton:focus,
+.rumble h3 + ul > li > a:hover,
+.rumble h3 + ul > li > a:focus,
+.rumble_top h3 + ul > li > a:hover,
+.rumble_top h3 + ul > li > a:focus,
+.paging a:hover,
+.paging a:focus,
+.itemHeaderControl a:hover,
+.itemHeaderControl a:focus,
+.actionMenuButton:hover,
+.actionMenuButton:focus,
+.button-3:hover,
+.button-3:focus,
+.button-4:hover,
+.button-4:focus,
+.button-3-img:hover,
+.button-3-img:focus,
+.button-4-img:hover,
+.button-4-img:focus,
+.navPaletteContent ul li:first-child .paletteSearch .button-4:hover,
+.navPaletteContent ul li:first-child .paletteSearch .button-4:focus,
+h3#cs_search + ul div.none:first-child .button-4:hover,
+h3#cs_search + ul div.none:first-child .button-4:focus,
+#toolsSearchBox + .button-4:hover,
+#toolsSearchBox + .button-4:focus,
+.treeContainer .tree li a.button-4-img:hover,
+.treeContainer .tree li a.button-4-img:focus,
+.rumble a:hover,
+.rumble_top a:hover,
+.rumble a:focus,
+.rumble_top a:focus {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.rumble_top .nav .sub ul li a,
+.rumble .nav .sub ul li a {
+    background: transparent;
+}
+
+.reply-lvl-0 .threadButtons .browse,
+.threadButtons .browse,
+.threadButtons .reply {
+    border: 0px solid transparent;
+}
+
+.reply-lvl-0 .threadButtons .browse:hover,
+.threadButtons .browse:hover,
+.threadButtons .reply:hover {
+    border: 0px solid transparent;
+}
+
+.reply-lvl-0 .threadButtons .reply {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 0;
+    border-color: transparent;
+}
+
+.reply-lvl-0 .threadButtons .reply:hover {
+    background: #667788;
+    border-color: #667788;
+}
+
+.profileCardAvatarThumb img {
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
 }
 }
 
